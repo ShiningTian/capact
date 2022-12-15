@@ -26,7 +26,7 @@ jobs:
       issues: read
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           persist-credentials: false
       - name: Setup Git credentials
@@ -41,7 +41,7 @@ jobs:
         run: |
           . ./hack/ci/setup-env.sh
       - name: Set up Go
-        uses: actions/setup-go@v2
+        uses: actions/setup-go@v3
         with:
           go-version: ${{env.GO_VERSION}}
       - name: Set up GoReleaser
